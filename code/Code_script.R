@@ -29,6 +29,11 @@ Bean_germination$treat<-as.factor(Bean_germination$treat)
 Bean_germination%>%
   select(treat,mean_germination_time)
 
+##creating a seperate table to explain each treatment
+treatments<- Bean_germination %>%
+  distinct(treat,salt,size) %>%
+  arrange(treat)
+
 ##creating my boxplots
 ggplot(Bean_germination, aes(x=treat,y=mean_germination_time))+
   geom_boxplot()+
