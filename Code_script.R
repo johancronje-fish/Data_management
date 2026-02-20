@@ -9,3 +9,9 @@ library(readxl)
 #Importing the needed data into R
 Bean_germination <- read_excel("Bean germination.xls")
 
+
+##Cleaning up the dataset
+
+#creating new colnames because excel colnames don't always agree with R
+
+
