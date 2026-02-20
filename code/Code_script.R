@@ -4,14 +4,14 @@
 library(tidyverse)
 library(ggplot2)
 library(readxl)
+library(janitor)
 
 
 #Importing the needed data into R
-Bean_germination <- read_excel("Bean germination.xls")
+Bean_germination <- Bean_germination <- read_excel("Data/Bean germination.xls")%>%
+  clean_names()
 
 
-##Cleaning up the dataset
 
-#creating new colnames because excel colnames don't always agree with R
 
 
