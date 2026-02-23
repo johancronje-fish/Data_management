@@ -1,0 +1,51 @@
+---
+title: "figures/tables"
+author: "Johan Cronje"
+date: "`r Sys.Date()`"
+output: html_document
+
+```{r, include=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(readxl)
+library(janitor)
+library(knitr)
+library(dplyr)
+```
+
+```{r,echo=FALSE}
+Bean_germination <- Bean_germination <- read_excel("Data/Bean germination.xls")%>%
+  clean_names()
+```
+
+```{r,echo=FALSE}
+#converting the appropriate columns from characters to factors
+Bean_germination$treat<-as.factor(Bean_germination$treat)
+Bean_germination$salt<-as.factor(Bean_germination$salt)
+Bean_germination$size<-as.factor(Bean_germination$size)
+
+```
+
+
+
+```{r,echo=FALSE}
+treatments<- Bean_germination %>%
+  distinct(treat,salt,size) %>%
+  arrange(treat)
+```
+
+
+```{r,echo=FALSE}
+kable(treatments)
+```
+Table 1. shows the different treatment levels in terms of salt added and the size of the beans.
+
+```{r,echo=FALSE}
+ggplot(Bean_germination, aes(x=treat,y=mean_germination_time))+
+  geom_boxplot()+
+  labs(x = "treatment",y= "Mean germination time (Days)")+
+  theme_minimal()+ 
+  scale_fill_discrete()
+```
+
+figure 1. Mean germination time of different sized beans in water containing salt or not.
