@@ -5,7 +5,8 @@ library(tidyverse)
 library(ggplot2)
 library(readxl)
 library(janitor)
-
+library(knitr)
+library(dplyr)
 
 
 #Importing the needed data into R
@@ -20,9 +21,8 @@ summary(Bean_germination)
 
 #converting the appropriate columns from characters to factors
 Bean_germination$treat<-as.factor(Bean_germination$treat)
-
-#Bean_germination$salt<-as.factor(Bean_germination$salt)
-#Bean_germination$size<-as.factor(Bean_germination$size)
+Bean_germination$salt<-as.factor(Bean_germination$salt)
+Bean_germination$size<-as.factor(Bean_germination$size)
 
 
 ##viewing the usefull columns for my boxplots
@@ -33,6 +33,9 @@ Bean_germination%>%
 treatments<- Bean_germination %>%
   distinct(treat,salt,size) %>%
   arrange(treat)
+
+#producing a table for Rmarkdown
+kable(treatments)
 
 ##creating my boxplots
 ggplot(Bean_germination, aes(x=treat,y=mean_germination_time))+
