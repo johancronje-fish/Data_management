@@ -3,33 +3,18 @@ Data management
 Johan Cronje
 2026-02-20
 
-## R Markdown
+** Study background**
+The aim of this study was to find out if salinity in water will increase the amount of time it takes for common beans to germinate. While doing research on this subject I also found out that germination time can also be influenced by bean size, which is why that was also a variable included in this experiment.
 
-This is an R Markdown document. Markdown is a simple formatting syntax
-for authoring HTML, PDF, and MS Word documents. For more details on
-using R Markdown see <http://rmarkdown.rstudio.com>.
+Study design:
+This study used 10 beans for each treatment and 5 replicates of each treatment (treatments are explained in the file :figures and tables). The mean time in days it took for the 10 beans to germinate was measured in this experiment. The 10 beans were placed in a petri dish in a room which kept humidity and temperature constant. The room was kept at 25 degrees celsius. The petridishes were covered by tissue paper and 20ml of either normal water or water containing salt was administered to each petridish daily.
 
-When you click the **Knit** button a document will be generated that
-includes both content as well as the output of any embedded R code
-chunks within the document. You can embed an R code chunk like this:
+** File explanation**
+The folowing files can be found in the github repository:
+  Data - which contains the dataset from this study
+  Code - contains the anotated r-script used for the analyses of this study
+  figures and table - contains the tables and figures produced by the r-script
+  install.r - contains the neccisary packages for r
+  license - contains the copyright license for the data and results of this study, please read if you plan on using the data or results.
 
-``` r
-summary(cars)
-```
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
-
-## Including Plots
-
-You can also embed plots, for example:
-
-![](README_files/figure-gfm/pressure-1.png)<!-- -->
-
-Note that the `echo = FALSE` parameter was added to the code chunk to
-prevent printing of the R code that generated the plot.
