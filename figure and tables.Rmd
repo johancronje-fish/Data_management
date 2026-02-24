@@ -2,7 +2,7 @@
 title: "figures/tables"
 author: "Johan Cronje"
 date: "`r Sys.Date()`"
-output: github_document
+output: gfm
 
 ```{r, include=FALSE}
 library(tidyverse)
