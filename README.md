@@ -3,6 +3,9 @@ Data management
 Johan Cronje
 2026-02-20
 
+Binder badge
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/johancronje-fish/Data_management/HEAD)
+
 **Study background**
 
 The aim of this study was to find out if salinity in water will increase the amount of time it takes for common beans to germinate. While doing research on this subject I also found out that germination time can also be influenced by bean size, which is why that was also a variable included in this experiment.
